@@ -3,7 +3,7 @@ import numpy as np
 from pathlib import Path
 from sklearn.inspection import permutation_importance
 import joblib
-from .config import DATA_PATH, ARTIFACTS
+from config import DATA_PATH, ARTIFACTS
 
 def main():
     df = pd.read_csv(DATA_PATH).sort_values("step").reset_index(drop=True)

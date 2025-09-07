@@ -2,7 +2,7 @@ import pandas as pd
 import numpy as np
 import matplotlib.pyplot as plt
 from pathlib import Path
-from .config import DATA_PATH
+from config import DATA_PATH
 
 OUTDIR = DATA_PATH.parent / "eda_charts"
 OUTDIR.mkdir(exist_ok=True, parents=True)

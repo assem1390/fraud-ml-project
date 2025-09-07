@@ -1,13 +1,12 @@
 import os
 from pathlib import Path
 
-# Data path (env override allowed)
-DATA_PATH = Path(os.getenv("FRAUD_DATA", "/fraud.csv"))
+# Default to Desktop path if env not set
+DATA_PATH = Path(os.getenv("FRAUD_DATA", "/Users/vuz/Desktop/fraud.csv"))
 
-# Main artifacts dir
+# All artifacts go under project folder
 ARTIFACTS = Path("artifacts_fraud_time_smote_cal")
 ARTIFACTS.mkdir(parents=True, exist_ok=True)
 
-# Slide assets dir
 SLIDES = Path("slides_assets")
 SLIDES.mkdir(parents=True, exist_ok=True)

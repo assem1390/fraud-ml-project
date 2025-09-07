@@ -1,0 +1,170 @@
+{
+  "schema": {
+    "categorical": [
+      "customer",
+      "age",
+      "gender",
+      "zipcodeOri",
+      "merchant",
+      "zipMerchant",
+      "category"
+    ],
+    "numeric": [
+      "step",
+      "amount"
+    ]
+  },
+  "cv": {
+    "splits": 3,
+    "scoring": "average_precision",
+    "n_iter": 20,
+    "row_subsample": 0.5
+  },
+  "metrics": {
+    "uncal": {
+      "roc_auc": 0.9986931930466897,
+      "pr_auc": 0.9306056998019692
+    },
+    "cal": {
+      "roc_auc": 0.9986593496597931,
+      "pr_auc": 0.9263214129590258
+    }
+  },
+  "thresholds_uncal": {
+    "thr_f1": 0.7990740123786547,
+    "thr_p90": 0.8101749115551108,
+    "thr_p95": 0.915296498229501,
+    "thr_p98": 0.962299992482423,
+    "thr_budget": 0.7917920290141635,
+    "thr_cost": 0.161688132272969
+  },
+  "thresholds_cal": {
+    "thr_f1": 0.35,
+    "thr_p90": 0.45894413506767834,
+    "thr_p95": 0.6956521739130435,
+    "thr_p98": 0.843297869785017,
+    "thr_budget": 0.4,
+    "thr_cost": 0.010050251256281407
+  },
+  "confusion_matrices": {
+    "uncal@0.50": {
+      "TN": 117125,
+      "FP": 524,
+      "FN": 75,
+      "TP": 1205
+    },
+    "uncal@thr_f1": {
+      "TN": 117527,
+      "FP": 122,
+      "FN": 230,
+      "TP": 1050
+    },
+    "uncal@p90": {
+      "TN": 117534,
+      "FP": 115,
+      "FN": 238,
+      "TP": 1042
+    },
+    "uncal@p95": {
+      "TN": 117601,
+      "FP": 48,
+      "FN": 353,
+      "TP": 927
+    },
+    "uncal@p98": {
+      "TN": 117633,
+      "FP": 16,
+      "FN": 481,
+      "TP": 799
+    },
+    "uncal@budget": {
+      "TN": 117514,
+      "FP": 135,
+      "FN": 226,
+      "TP": 1054
+    },
+    "uncal@cost": {
+      "TN": 115845,
+      "FP": 1804,
+      "FN": 20,
+      "TP": 1260
+    },
+    "cal@0.50": {
+      "TN": 117580,
+      "FP": 69,
+      "FN": 331,
+      "TP": 949
+    },
+    "cal@thr_f1": {
+      "TN": 117461,
+      "FP": 188,
+      "FN": 209,
+      "TP": 1071
+    },
+    "cal@p90": {
+      "TN": 117577,
+      "FP": 72,
+      "FN": 330,
+      "TP": 950
+    },
+    "cal@p95": {
+      "TN": 117620,
+      "FP": 29,
+      "FN": 401,
+      "TP": 879
+    },
+    "cal@p98": {
+      "TN": 117639,
+      "FP": 10,
+      "FN": 549,
+      "TP": 731
+    },
+    "cal@budget": {
+      "TN": 117498,
+      "FP": 151,
+      "FN": 238,
+      "TP": 1042
+    },
+    "cal@cost": {
+      "TN": 115625,
+      "FP": 2024,
+      "FN": 20,
+      "TP": 1260
+    }
+  },
+  "alert_projections_daily": {
+    "typical_daily_txn": 120000,
+    "cal": {
+      "thr_f1": {
+        "threshold": 0.35,
+        "alerts_eval": 1259,
+        "alerts_daily_proj": 1270
+      },
+      "p90": {
+        "threshold": 0.45894413506767834,
+        "alerts_eval": 1022,
+        "alerts_daily_proj": 1031
+      },
+      "thr_p95": {
+        "threshold": 0.6956521739130435,
+        "alerts_eval": 908,
+        "alerts_daily_proj": 916
+      },
+      "thr_p98": {
+        "threshold": 0.843297869785017,
+        "alerts_eval": 741,
+        "alerts_daily_proj": 748
+      },
+      "thr_budget": {
+        "threshold": 0.4,
+        "alerts_eval": 1193,
+        "alerts_daily_proj": 1204
+      },
+      "thr_cost": {
+        "threshold": 0.010050251256281407,
+        "alerts_eval": 3284,
+        "alerts_daily_proj": 3314
+      }
+    }
+  }
+}

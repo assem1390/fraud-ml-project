@@ -1,0 +1,4 @@
+Model,ROC_AUC_uncal,PR_AUC_uncal,ROC_AUC_cal,PR_AUC_cal,best_params
+LogisticRegression,0.9933131935354318,0.8555536753343047,0.9923574009075725,0.841937005026191,"{'clf__solver': 'liblinear', 'clf__penalty': 'l2', 'clf__C': 0.2}"
+RandomForest,0.9984238238584688,0.9133175043102442,0.9974974752760329,0.9105509807637198,"{'clf__n_estimators': 900, 'clf__min_samples_split': 2, 'clf__min_samples_leaf': 2, 'clf__max_depth': None}"
+LightGBM,0.998529706877024,0.9205370113249555,0.998177430853641,0.9096196749001857,"{'clf__subsample': 0.85, 'clf__reg_lambda': 1.0, 'clf__reg_alpha': 1.0, 'clf__num_leaves': 127, 'clf__n_estimators': 400, 'clf__min_child_samples': 20, 'clf__max_depth': -1, 'clf__learning_rate': 0.08, 'clf__colsample_bytree': 0.7}"

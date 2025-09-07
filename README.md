@@ -21,7 +21,7 @@ pip install -r requirements.txt
 
 Data path: set an environment variable (recommended):
 
-export FRAUD_DATA=/Users/vuz/Desktop/fraud.csv
+export FRAUD_DATA=fraud.csv
 
 
 If unset, scripts default to the same path.
@@ -35,7 +35,7 @@ python src/eda_charts.py
 
 Train ensemble + calibration + summary.json + curves
 
-python src/train_ensemble.py
+python -m src.train_ensemble
 
 
 Feature importance (permutation + LGBM gain)
@@ -43,19 +43,12 @@ Feature importance (permutation + LGBM gain)
 python src/feature_importance.py
 
 
-Slide assets (tables/plots)
-
-python src/slide_assets.py
 
 
 Baselines (LR / RF / LGBM)
 
 python src/make_model_baselines.py
 
-
-Pipeline diagram (Graphviz)
-
-python src/pipeline_diagram.py
 
 
 Use in production (scoring)
